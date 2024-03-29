@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script>
+    function fibsRec(x) {
+      let arr = [];
+      if (x <= 2) {
+        arr.push(1);
+        return 1;
+      } else {
+        console.log(x);
+        arr.push(x);
+        return fibsRec(x - 1) + fibsRec(x - 2);
+      }
+      
+    }
+
+  
+    function fibsFor(input) {
+      let array = [];
+      let x = 0;
+      let y = 1;
+      let z;
+
+      array.push(x);
+      array.push(y);
+      
+      let i = 2;
+      while (i < input) {
+        z = x + y;
+        x = y;
+        y = z;
+
+        array.push(z);
+        i = i+1;
+      }
+      return array;
+      }
+     
+    
+
+  
+    fibsFor(3);
+  </script>
+</html>
